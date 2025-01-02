@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="">
+    <style>
+         body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #5fc7ff, #fe7bd7);
+            /* Gradient from left to right (orange to peach) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            border: 2px solid #4d3a9a;
+            background: linear-gradient(to right,rgb(254, 148, 148),rgb(130, 130, 238));
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        legend {
+            font-size:medium;
+            font-weight:600;
+            color:rgb(0, 0, 0);
+        }
+
+        input{
+            border-style: dotted;
+            border-color: dimgrey;    
+        }        
+
+        label{
+            color:#000000;
+        }
+
+        p{
+            display: none;
+        }
+        input:hover + p{
+            display:inline-block;
+        }
+        
+        input:focus{
+            color: #ff0000;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fe7bd7;
+            font-weight:bold;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+           
+            <tr>
+                <td>
+                    <label>Name</label>
+                    <input type="text" name="Fname" placeholder="Enter Your Name"/>
+                    <p>
+                        Fill the required fields
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email address" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Phone Number</label>
+                    <input type="tel" name="tel" placeholder="Enter your phone number" maxlength="10"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter your password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password</label>
+                    <input type="password" name="confirm_password" placeholder="Re-enter your password"/>
+                    <p>
+                        Fill the required fields below
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date of Birth</label>
+                    <input type="date" name="date" placeholder="Enter your birth date"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Age</label>
+                    <input type="number" name="age" placeholder="Enter your age"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Gender</label>
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male"> Male
+                    </label>
+                    
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                    </label>
+                    
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="other"> Other
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="country">Select Country</label>
+                    <select id="country" name="country">
+                    <option value="india">india</option>
+                    <option value="usa">usa</option>
+                    <option value="russia">russia</option>
+                    </select>             
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+           </form>
+        </table>
+    </fieldset>
+</body>
+</html>
